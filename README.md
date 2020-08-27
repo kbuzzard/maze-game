@@ -6,15 +6,22 @@ This came out of discussions between Kevin Buzzard and Kendall Frey on the Xena 
 
 You're in a maze of twisty passages, all alike! You can go North, South, East or West. Look for the exit!
 
+Broght to you by the Xena Project.
+
 ## How to play
 
-```
-leanproject get kbuzzard/
+Right now, you need to make you have the leanprover community mathlib tools installed.
+See [here]()
 
+Either 
+
+```
+leanproject get kbuzzard/maze-game
+```
 
 ### Example
 
-The maze is defined to be:
+The example maze is defined to be:
 
 ```text
 01
@@ -24,6 +31,8 @@ The maze is defined to be:
 
 The start is defined to be 0, and
 the end is defined to be 4.
+
+
 
 
 
