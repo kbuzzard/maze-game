@@ -49,7 +49,13 @@ The map of example maze is defined to be:
 The start is defined to be 0, and
 the end is defined to be 4.
 
+## Interesting questions
 
+Can people write python code which designs levels?
+
+Can people write Lean code which solves levels?
+
+How far can each system go?
 
 
 
