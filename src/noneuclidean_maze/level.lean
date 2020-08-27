@@ -24,6 +24,8 @@ begin
   -- move around e.g. `go north,`. Don't forget the comma 
   go south,
   go east,
+  s,
+  n,n,w,
   -- leave from room J with `out`.
   sorry,
 end

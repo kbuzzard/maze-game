@@ -1,10 +1,16 @@
 import tactic
 /-
-Going from 5 to 2 triggers a warp 
+ WWW
+WABCW
+WDEFW
+WGHIW
+ WWW
 
-012
-345
-678
+and secret room J
+
+-- start in room A
+-- have to find the secret and get to room J
+-- W is a temp wall room which we never go into.
 
 Can people write computer programs in Lean which solve
 levels like this?
@@ -38,6 +44,7 @@ DEF
 GHI
 -/
 
+/-- This is basically the map of the maze -/
 def go (d : direction) (m : maze) : maze :=
 direction.rec_on d
   (maze.rec_on m W W W A B C D E F J W)
@@ -45,6 +52,7 @@ direction.rec_on d
   (maze.rec_on m D E F G H I W W W J W)
   (maze.rec_on m W A B W D E W J H J W)
 
+/-- The predicate of being able to escape from the maze -/
 inductive can_escape : maze → Prop
 | exit : can_escape J
 | go : ∀ d x, can_escape (go d x) → can_escape x
@@ -59,6 +67,10 @@ meta def go (d : direction) : tactic unit :=
 `[apply can_escape.go %%d, unfold maze.go,
 fail_if_success { guard_target can_escape W } <|> fail "You hit a wall!" ]
 
+meta def tactic.interactive.n := `[go north]
+meta def tactic.interactive.s := `[go south]
+meta def tactic.interactive.e := `[go east]
+meta def tactic.interactive.w := `[go west]
 
 open tactic
 
@@ -68,10 +80,7 @@ meta def out : tactic unit :=
 
 -- theorem solve : can_escape A :=
 -- begin
---   -- move around e.g. `go north,`. Don't forget the comma 
---   go south,
---   go east,
---   -- leave from room J with `out`.
+--   s,
 --   sorry,
 -- end
 
