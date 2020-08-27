@@ -10,7 +10,7 @@ Brought to you by the Xena Project.
 
 ## How to play
 
-To install localle, you need to make you have the leanprover community mathlib tools installed.
+To install locally, you need to make you have the leanprover community mathlib tools installed.
 See [here](https://leanprover-community.github.io/get_started.html#regular-install) for instructions for how to install on your OS.
 
 Then do
