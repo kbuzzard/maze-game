@@ -13,8 +13,6 @@ You can go north, south east or west.
 
 namespace maze
 
-open can_escape
-
 /- Solver remark : there are 5 rooms. -/
 
 /-- Use n,s,e,w to move around. When you're at the exit, type `out`. -/

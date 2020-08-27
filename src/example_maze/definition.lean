@@ -39,7 +39,6 @@ namespace maze
 def mk (n : ℕ) : maze := n
 
 /-- The map. Interface will be unknown to player -/
-
 inductive can_escape : maze → Prop
 | have_escaped : can_escape $ mk 4
 | N1 : can_escape (mk 0) → can_escape (mk 2)
@@ -60,21 +59,21 @@ end maze
 
 namespace tactic.interactive
 
-open maze.can_escape
+--open maze.can_escape
 
 open tactic
 
 meta def n :=
-`[apply N1 <|> apply N2 <|> apply N3 <|> fail "you cannot go north"]
+`[apply maze.can_escape.N1 <|> apply maze.can_escape.N2 <|> apply maze.can_escape.N3 <|> fail "you cannot go north"]
 
 meta def s :=
-`[apply S1 <|> apply S2 <|> apply S3 <|> fail "you cannot go south"]
+`[apply maze.can_escape.S1 <|> apply maze.can_escape.S2 <|> apply maze.can_escape.S3 <|> fail "you cannot go south"]
 
 meta def e :=
-`[apply E1 <|> apply E2 <|> fail "you cannot go east"]
+`[apply maze.can_escape.E1 <|> apply maze.can_escape.E2 <|> fail "you cannot go east"]
 
 meta def w :=
-`[apply W1 <|> apply W2 <|> fail "you cannot go west"]
+`[apply maze.can_escape.W1 <|> apply maze.can_escape.W2 <|> fail "you cannot go west"]
 
 meta def out := `[apply have_escaped <|> fail "you are not at the exit"]
 
