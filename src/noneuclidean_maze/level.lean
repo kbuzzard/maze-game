@@ -20,6 +20,7 @@ open maze direction
 
 theorem solve : can_escape A :=
 begin
+  -- you start in room A.
   -- move around e.g. `go north,`. Don't forget the comma 
   go south,
   go east,
