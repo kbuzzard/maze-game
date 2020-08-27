@@ -10,18 +10,35 @@ Broght to you by the Xena Project.
 
 ## How to play
 
-Right now, you need to make you have the leanprover community mathlib tools installed.
-See [here]()
+To install localle, you need to make you have the leanprover community mathlib tools installed.
+See [here](https://leanprover-community.github.io/get_started.html#regular-install) for instructions for how to install on your OS.
 
-Either 
+Then do
 
 ```
 leanproject get kbuzzard/maze-game
 ```
 
-### Example
+and open the project with the "open folder" functionality of VS Code, or by using
+```
+cd maze-game
+code .
+```
 
-The example maze is defined to be:
+on the command line.
+
+
+## Can we play on CoCalc?
+
+Great question! Here's hoping.
+
+## Playing the example maze
+
+You need to open the file `level.lean` in `src/example_maze`, in a Lean editor like VS Code.
+
+
+
+The map of example maze is defined to be:
 
 ```text
 01
