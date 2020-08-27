@@ -30,6 +30,12 @@ begin
   out,
 end
 
+example : can_escape 8 13 0 :=
+begin
+  sorry
+end
+
+
 example : can_escape 20 77 0 :=
 begin
   iterate 27 {n},
