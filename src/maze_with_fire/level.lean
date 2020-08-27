@@ -15,7 +15,7 @@ room 5.
 
 namespace maze
 
-/- Solver remark : there are 5 rooms. -/
+/- Solver remark : there are 6 rooms. -/
 
 /-- Use n,s,e,w to move around. When you're at the exit, type `out`. -/
 
