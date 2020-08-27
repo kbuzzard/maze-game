@@ -29,11 +29,12 @@ begin
   s,
   e,
   n,
-  -- etc etc,
   sorry,
+  -- Don't forget the commas.
   -- Don't bang into the walls -- those are errors.
   -- When you get there, the tactic to get you out is `out`. 
-  -- There is also a magic word, an ancient translation of the word `sorry`.
+  -- There is also a magic word, rumoured to be
+  -- an ancient translation of the word `sorry`.
 end
 
 end maze
