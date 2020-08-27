@@ -6,7 +6,7 @@ This came out of discussions between Kevin Buzzard and Kendall Frey on the Xena 
 
 You're in a maze of twisty passages, all alike! You can go North, South, East or West. Look for the exit!
 
-Broght to you by the Xena Project.
+Brought to you by the Xena Project.
 
 ## How to play
 
